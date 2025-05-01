@@ -4,6 +4,7 @@ const Paragraph = styled.h1`
   font-size: 30px;
   font-weight: bold;
   line-height: 1.5;
+  color: ${({ theme }) => theme.paragraphColor};
 `
 
 export { Paragraph };

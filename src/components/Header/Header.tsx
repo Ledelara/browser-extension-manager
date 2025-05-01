@@ -1,10 +1,12 @@
-import { useState } from "react";
 import { Header } from "../StyledComponents/Header/Header";
-import './Header.css';
+import { ThemeToggle } from "../StyledComponents/ThemeToggle/ThemeToggle";
 
-export default function HeaderComponent() {
+interface HeaderProps {
+  themeName: "light" | "dark";
+  setThemeName: React.Dispatch<React.SetStateAction<"light" | "dark">>;
+}
 
-  const [theme, setTheme] = useState<string>("light");
+export default function HeaderComponent({ themeName, setThemeName }: HeaderProps) {
 
   return (
     <Header>
@@ -17,13 +19,14 @@ export default function HeaderComponent() {
         }} 
       />
       {
-        <div className="theme-toggle" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-          {theme === "light" ? (
+        <ThemeToggle onClick={() => setThemeName(themeName === "light" ? "dark" : "light")}>
+          {themeName === "light" ? (
             <img src="/assets/images/icon-moon.svg" alt="Dark Mode" />
           ) : (
             <img src="/assets/images/icon-sun.svg" alt="Light Mode" />
           )}
-        </div>
+
+        </ThemeToggle>
       }
     </Header>
   )

@@ -9,7 +9,6 @@ const Container = styled.div`
   color: var(--neutral-0);
   width: 100%;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
     margin-top: 20px;

@@ -18,8 +18,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
-    background: var(--neutral-900);
-    color: var(--neutral-900);
+    background: ${({ theme }) => theme.gradient} no-repeat center center fixed;
+    color: ${({ theme }) => theme.textColor};
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
