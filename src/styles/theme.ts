@@ -5,8 +5,13 @@ export const lightTheme = {
   gradient: "var(--light-gradient)",
   headerBg: "var(--neutral-0)",
   toggleBg: "var(--neutral-100)",
-  switchBg: "var(--neutral-300)",
   cardBorder: "var(--neutral-300)",
+
+  // lightTheme
+  switchBg: "var(--neutral-300)",
+  switchThumb: "var(--neutral-100)",         // Bolinha
+  switchCheckedBg: "var(--red-700)",         // Fundo quando ligado
+
 
   buttonBg: "var(--neutral-0)",
   buttonText: "var(--neutral-900)",
@@ -24,8 +29,12 @@ export const darkTheme = {
   gradient: "var(--dark-gradient)",
   headerBg: "var(--neutral-700)",
   toggleBg: "var(--neutral-600)",
-  switchBg: "var(--neutral-300)",
   cardBorder: "var(--neutral-600)",
+
+  switchBg: "var(--neutral-700)",            // Fundo do switch (desligado)
+  switchThumb: "var(--neutral-100)",         // Bolinha
+  switchCheckedBg: "var(--red-700)",         // Fundo quando ligado
+
 
   buttonBg: "var(--neutral-700)",
   buttonText: "var(--neutral-0)",
