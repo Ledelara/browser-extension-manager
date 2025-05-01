@@ -25,7 +25,10 @@ export default function CardComponent({ name, logo, description, isActive }: Car
           <Button className="card-component__button" onClick={() => alert("Button clicked!")} active={false}>
             Remove
           </Button>
-          <input type="checkbox" className="card-component__checkbox" checked={isActive} readOnly />
+          <label className="switch">
+            <input type="checkbox" checked={isActive} readOnly />
+            <span className="slider"></span>
+          </label>
         </div>
       </div>
     </Card>
