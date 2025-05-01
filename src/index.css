@@ -14,7 +14,7 @@ body {
 body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
-  background: var(--dark-gradient);
+  background: var(--dark-gradient) no-repeat center center fixed;
   color: var(--neutral-0);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
