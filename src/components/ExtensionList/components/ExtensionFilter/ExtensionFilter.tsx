@@ -14,7 +14,7 @@ export default function ExtensionFilter({
 
   return (
     <div className="extension-filter">
-      <Paragraph>Extension List</Paragraph>
+      <Paragraph>Extensions List</Paragraph>
       <div className="extension-filter__button-container">
         <Button
           primary
