@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Card = styled.div`
-  background-color: var(--neutral-800);
+  background-color: ${({ theme }) => theme.bodyBg};
   border-radius: 20px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

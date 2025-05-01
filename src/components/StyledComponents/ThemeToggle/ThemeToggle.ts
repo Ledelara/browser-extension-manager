@@ -7,7 +7,7 @@ const ThemeToggle = styled.button`
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background-color: var(--neutral-600);
+  background-color: ${({ theme }) => theme.toggleBg};
   cursor: pointer;
   border: none;
 `

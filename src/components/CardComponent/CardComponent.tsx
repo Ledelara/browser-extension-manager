@@ -1,5 +1,7 @@
 import { Button } from "../StyledComponents/Button/Button";
 import { Card } from "../StyledComponents/Card/Card";
+import { Paragraph } from "../StyledComponents/Paragraph/Paragraph";
+import { Text } from "../StyledComponents/Text/Text";
 import "./CardComponent.css";
 
 interface CardComponentProps {
@@ -16,8 +18,8 @@ export default function CardComponent({ name, logo, description, isActive }: Car
         <div className="card-component__extension-header">
           <img src={logo} alt={`${name} logo`} className="card-component__logo" />
           <div className="card-component__text-container">
-            <h2 className="card-component__name">{name}</h2>
-            <p className="card-component__description">{description}</p>
+            <Paragraph className="card-component__name">{name}</Paragraph>
+            <Text className="card-component__description">{description}</Text>
           </div>
         </div>
 
