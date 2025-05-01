@@ -25,7 +25,7 @@ export default function CardComponent({ name, logo, description, isActive }: Car
         </div>
 
         <div className="card-component__status-container">
-          <Button className="card-component__button" onClick={() => alert("Button clicked!")} active={false}>
+          <Button className="card-component__button" active={false}>
             Remove
           </Button>
           <StyledSwitch checked={isActive}>
