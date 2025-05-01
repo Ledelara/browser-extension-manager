@@ -1,10 +1,9 @@
 import { ThemeProvider } from "styled-components";
 import { theme } from "./components/StyledComponents/globalStyle";
-import "./App.css";
-import { Button } from "./components/StyledComponents/Button/Button";
 import HeaderComponent from "./components/Header/Header";
 import ContainerComponent from "./components/Container/Container";
-import { Paragraph } from "./components/StyledComponents/Paragraph/Paragraph";
+import ExtensionList from "./components/ExtensionList/ExtensionList";
+import "./App.css";
 
 function App() {
   return (
@@ -14,9 +13,7 @@ function App() {
       </header>
       <body>
         <ContainerComponent>
-          <Paragraph>Texto de exemplo</Paragraph>
-          <Button primary>Botão principal</Button>
-          <Button>Botão secundário</Button>
+          <ExtensionList />
         </ContainerComponent>
       </body>
     </ThemeProvider>
