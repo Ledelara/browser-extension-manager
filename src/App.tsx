@@ -3,6 +3,8 @@ import { theme } from "./components/StyledComponents/globalStyle";
 import "./App.css";
 import { Button } from "./components/StyledComponents/Button/Button";
 import HeaderComponent from "./components/Header/Header";
+import ContainerComponent from "./components/Container/Container";
+import { Paragraph } from "./components/StyledComponents/Paragraph/Paragraph";
 
 function App() {
   return (
@@ -10,11 +12,13 @@ function App() {
       <header>
         <HeaderComponent />
       </header>
-      <div>
-        <h1>Browser Extension Manager</h1>
-        <Button primary>Botão principal</Button>
-        <Button>Botão secundário</Button>
-      </div>
+      <body>
+        <ContainerComponent>
+          <Paragraph>Texto de exemplo</Paragraph>
+          <Button primary>Botão principal</Button>
+          <Button>Botão secundário</Button>
+        </ContainerComponent>
+      </body>
     </ThemeProvider>
   );
 }
