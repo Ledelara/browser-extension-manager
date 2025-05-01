@@ -18,7 +18,7 @@ const Button = styled.button<ButtonProps>`
 
   &:hover {
     background-color: ${({ active }) =>
-      active ? 'var(--red-600)' : 'var(--neutral-200)'};
+      active ? 'var(--red-700)' : 'var(--neutral-600)'};  
   }
 `;
 
