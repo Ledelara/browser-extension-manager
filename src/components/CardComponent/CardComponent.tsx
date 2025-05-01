@@ -1,6 +1,7 @@
 import { Button } from "../StyledComponents/Button/Button";
 import { Card } from "../StyledComponents/Card/Card";
 import { Paragraph } from "../StyledComponents/Paragraph/Paragraph";
+import { StyledSwitch, SwitchInput, SwitchSlider, SwitchWrapper } from "../StyledComponents/Switch/Switch";
 import { Text } from "../StyledComponents/Text/Text";
 import "./CardComponent.css";
 
@@ -27,10 +28,12 @@ export default function CardComponent({ name, logo, description, isActive }: Car
           <Button className="card-component__button" onClick={() => alert("Button clicked!")} active={false}>
             Remove
           </Button>
-          <label className="switch">
-            <input type="checkbox" checked={isActive} readOnly />
-            <span className="slider"></span>
-          </label>
+          <StyledSwitch checked={isActive}>
+            <SwitchWrapper>
+              <SwitchInput type="checkbox" checked={isActive} readOnly />
+              <SwitchSlider />
+            </SwitchWrapper>
+          </StyledSwitch>
         </div>
       </div>
     </Card>

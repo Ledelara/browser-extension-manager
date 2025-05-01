@@ -9,6 +9,8 @@ declare module "styled-components" {
     headerBg: string;
     toggleBg: string;
     switchBg: string;
+    switchThumb: string;
+    switchCheckedBg: string;
     cardBorder: string;
     buttonBg: string;
     buttonText: string;
