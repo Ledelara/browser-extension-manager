@@ -8,13 +8,19 @@ export default function ExtensionList() {
   const [filter, setFilter] = useState("all");
   const [extensions, setExtensions] = useState(InitialExtensions);
 
-  const hhandleActiveChange = (extensionId: number, isActive: boolean) => {
+  const handleActiveChange = (extensionId: number, isActive: boolean) => {
     setExtensions((prevExtensions) =>
       prevExtensions.map((ext) =>
         ext.id === extensionId ? { ...ext, isActive } : ext
       )
     );
   };
+
+  const handleRemoveExtension = (extensionId: number) => {
+    setExtensions((prevExtensions) =>
+      prevExtensions.filter((ext) => ext.id !== extensionId)
+    );
+  }
 
   return (
     <div className="extension-list">
@@ -35,12 +41,18 @@ export default function ExtensionList() {
                 logo={extension.logo}
                 description={extension.description}
                 isActive={extension.isActive} 
-                onClick={() => hhandleActiveChange(extension.id, !extension.isActive)}
+                onClickSwitch={() => handleActiveChange(extension.id, !extension.isActive)}
+                onClick={() => handleRemoveExtension(extension.id)} 
               />
             );
           }
           return null;
         })}
+        {extensions.length === 0 && (
+          <div className="extension-list__no-extensions">
+            <p>No extensions available.</p>
+          </div>
+        )}
       </div>
     </div>
   );
