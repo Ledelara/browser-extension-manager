@@ -10,9 +10,10 @@ interface CardComponentProps {
   logo: string;
   description: string;
   isActive: boolean;
+  onClick: () => void;
 }
 
-export default function CardComponent({ name, logo, description, isActive }: CardComponentProps) {
+export default function CardComponent({ name, logo, description, isActive, onClick }: CardComponentProps) {
   return (
     <Card>
       <div className="card-component">
@@ -30,7 +31,7 @@ export default function CardComponent({ name, logo, description, isActive }: Car
           </Button>
           <StyledSwitch checked={isActive}>
             <SwitchWrapper>
-              <SwitchInput type="checkbox" checked={isActive} readOnly />
+              <SwitchInput type="checkbox" checked={isActive} onClick={onClick}/>
               <SwitchSlider />
             </SwitchWrapper>
           </StyledSwitch>
