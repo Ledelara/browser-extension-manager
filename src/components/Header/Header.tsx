@@ -8,6 +8,12 @@ interface HeaderProps {
 
 export default function HeaderComponent({ themeName, setThemeName }: HeaderProps) {
 
+  const handleSaveTheme = () => {
+    const newTheme = themeName === "light" ? "dark" : "light";
+    setThemeName(newTheme); 
+    localStorage.setItem("theme", newTheme);
+  }
+
   return (
     <Header>
       <img 
@@ -19,7 +25,7 @@ export default function HeaderComponent({ themeName, setThemeName }: HeaderProps
         }} 
       />
       {
-        <ThemeToggle onClick={() => setThemeName(themeName === "light" ? "dark" : "light")}>
+        <ThemeToggle onClick={handleSaveTheme}>
           {themeName === "light" ? (
             <img src="/assets/images/icon-moon.svg" alt="Dark Mode" />
           ) : (
